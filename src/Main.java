@@ -11,7 +11,7 @@ public class Main {
 				try {
 					LocalDate date = LocalDate.of(2023, mese, giorno);
 					System.out.println("Data attuale: " + date);
-					System.out.println(data.generateInsertDate(5,date));
+					System.out.println(data.generateInsertDate_bis(5,date));
 				} catch(Exception e) {
 					continue;	
 				}

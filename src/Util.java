@@ -1,4 +1,5 @@
  import java.time.LocalDate;
+import java.time.temporal.TemporalAdjusters;
 
 public class Util {
 	private int year;
@@ -22,6 +23,9 @@ public class Util {
 		}
 		LocalDate dateQuery = LocalDate.of(year, month, day);
 		return dateQuery.toString();
+	}
+	public String generateInsertDate_bis(int Nr, LocalDate date) {
+		return date.with(TemporalAdjusters.firstDayOfMonth()).minusMonths(Nr).toString();
 	}
 }
 
